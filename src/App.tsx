@@ -1,9 +1,16 @@
-import {Button} from "../components/ui/button"
+// import {Button} from "../components/ui/button"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
+
+const App = () => {
   return (
     <>
-      <Button>hi mom</Button>
+      <h1>lemvklemrlk</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   )
 }

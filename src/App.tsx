@@ -1,8 +1,9 @@
+import {Button} from "../components/ui/button"
 
 function App() {
   return (
     <>
-      <h1>hi mom</h1>
+      <Button>hi mom</Button>
     </>
   )
 }

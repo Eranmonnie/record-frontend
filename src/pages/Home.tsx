@@ -1,9 +1,13 @@
-import React from "react";
+import { ModeToggle } from "@/components/toggle";
+import { UserButton } from "@clerk/clerk-react";
+
 
 const Home = () => {
   return (
     <div>
-      <h1 className="text-lg">home sweet home protected route </h1>
+      <UserButton 
+      afterSignOutUrl="/"/>
+      <ModeToggle />
     </div>
   );
 };

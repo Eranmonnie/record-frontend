@@ -24,28 +24,30 @@ const App = () => {
         publishableKey={PUBLISHABLE_KEY}
         navigate={(to) => navigate(to)}
       >
-        <ThemeProvider
-        defaultTheme="dark"
-        storageKey="discord-theme"
-        >
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <SignedIn>
-                    <Home />
-                  </SignedIn>
-                  <SignedOut>
-                    <RedirectToSignIn />
-                  </SignedOut>
-                </>
-              }
-            />
-            <Route path="/sign-in" element={<Signin />} />
-            <Route path="/sign-up" element={<Signup />} />
-          </Routes>
-        </ThemeProvider>
+        {/* <div className={cn(
+          font.className,
+          "bg-white dark:bg-[#313338")
+          }> */}
+          <ThemeProvider defaultTheme="dark" storageKey="discord-theme">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <SignedIn>
+                      <Home />
+                    </SignedIn>
+                    <SignedOut>
+                      <RedirectToSignIn />
+                    </SignedOut>
+                  </>
+                }
+              />
+              <Route path="/sign-in" element={<Signin />} />
+              <Route path="/sign-up" element={<Signup />} />
+            </Routes>
+          </ThemeProvider>
+        {/* </div> */}
       </ClerkProvider>
     </>
   );
